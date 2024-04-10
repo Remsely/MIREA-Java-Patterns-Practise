@@ -1,4 +1,4 @@
-package edu.remsely.java-patterns;
+package edu.remsely.java_patterns;
 
 public class Main {
     public static void main(String[] args) {
