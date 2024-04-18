@@ -35,15 +35,15 @@ public class Test {
     }
 
     public static void testSet(Set<Integer> set) throws InterruptedException {
-        ExecutorService executorService = Executors.newFixedThreadPool(100);
+        ExecutorService executorService = Executors.newFixedThreadPool(1000);
 
         Runnable task = () -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 1000; i++) {
                 set.add(i);
             }
         };
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             executorService.execute(task);
         }
 

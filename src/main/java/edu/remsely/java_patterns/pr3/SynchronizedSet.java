@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class SynchronizedSet<E> implements Set<E> {
-    private final Set<E> set = new HashSet<E>();
+    private final Set<E> set = new HashSet<>();
 
     @Override
     public synchronized int size() {

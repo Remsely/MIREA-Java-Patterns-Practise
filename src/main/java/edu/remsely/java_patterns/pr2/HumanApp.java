@@ -1,10 +1,21 @@
 package edu.remsely.java_patterns.pr2;
 
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+@Data
+class Human {
+    private final int age;
+    private final String firstName;
+    private final String lastName;
+    private final LocalDate birthDate;
+    private final int weight;
+}
 
 public class HumanApp {
     public static void main(String[] args) {

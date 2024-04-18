@@ -15,7 +15,6 @@ class MacOSButton implements Button {
     }
 }
 
-
 class MacOSWidget implements Widget {
     @Override
     public void paint() {
@@ -29,7 +28,6 @@ class WindowsButton implements Button {
         System.out.println("WindowsButton");
     }
 }
-
 
 class WindowsWidget implements Widget {
     @Override
@@ -67,11 +65,11 @@ class WindowsGUIFactory implements GUIFactory {
     }
 }
 
-public class AbstractFactoryTest {
+public class AbstractFactory {
     private final Button button;
     private final Widget widget;
 
-    public AbstractFactoryTest(GUIFactory factory) {
+    public AbstractFactory(GUIFactory factory) {
         this.button = factory.createButton();
         this.widget = factory.createWidget();
     }
@@ -82,10 +80,10 @@ public class AbstractFactoryTest {
     }
 
     public static void main(String[] args) {
-        AbstractFactoryTest test = new AbstractFactoryTest(new MacOSGUIFactory());
+        AbstractFactory test = new AbstractFactory(new MacOSGUIFactory());
         test.paint();
 
-        test = new AbstractFactoryTest(new WindowsGUIFactory());
+        test = new AbstractFactory(new WindowsGUIFactory());
         test.paint();
     }
 }

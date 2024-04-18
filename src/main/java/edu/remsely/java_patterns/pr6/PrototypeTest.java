@@ -27,5 +27,6 @@ public class PrototypeTest {
 
         System.out.println(original);
         System.out.println(clone);
+        System.out.println(original == clone);
     }
 }
